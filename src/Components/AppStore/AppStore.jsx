@@ -1,45 +1,55 @@
-import React from "react";
-import AppStoreImg from "../../assets/website/app_store.png";
-import PlayStoreImg from "../../assets/website/play_store.png";
+import AppStoreImg from '../../assets/website/app_store.png';
+import PlayStoreImg from '../../assets/website/play_store.png';
 
 const AppStore = () => {
   return (
-    <>
-      <div className="container py-10 sm:min-h-[400px] sm:grid sm:place-items-center">
-        <div className="space-y-6 max-w-xl mx-auto">
-          <h1
-            data-aos="fade-up"
-            className="text-2xl text-center sm:text-4xl font-semibold "
+    <div className='container py-16 sm:py-20 sm:min-h-[400px] flex items-center'>
+      <div className='max-w-2xl mx-auto space-y-8 text-center'>
+        <h1
+          data-aos='fade-up'
+          className='text-3xl font-bold leading-tight sm:text-4xl md:text-5xl'
+        >
+          Experience VR
+          <span className='block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-cursive'>
+            Anytime, Anywhere
+          </span>
+        </h1>
+        <p
+          data-aos='fade-up'
+          data-aos-delay='300'
+          className='text-lg text-gray-600 sm:px-20'
+        >
+          Download our app and immerse yourself in captivating virtual worlds.
+          Available now on iOS and Android devices.
+        </p>
+        <div
+          className='flex flex-wrap items-center justify-center gap-6'
+          data-aos='fade-up'
+          data-aos-delay='500'
+        >
+          <a
+            href='#'
+            className='transition-transform rounded-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
           >
-            Get Started with our app
-          </h1>
-          <p
-            data-aos="fade-up"
-            data-aos-delay="300"
-            className="text-center sm:px-20"
+            <img
+              src={AppStoreImg}
+              alt='Download on the App Store'
+              className='max-w-[150px] sm:max-w-[180px] md:max-w-[200px]'
+            />
+          </a>
+          <a
+            href='#'
+            className='transition-transform rounded-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-            magnam harum accusantium odit?
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 items-center">
-            <a href="#" data-aos="fade-up" data-aos-delay="500">
-              <img
-                src={AppStoreImg}
-                alt=""
-                className="max-w-[150px] sm:max-w-[120px] md:max-w-[200px]"
-              />
-            </a>
-            <a href="#" data-aos="fade-up" data-aos-delay="700">
-              <img
-                src={PlayStoreImg}
-                alt=""
-                className="max-w-[150px] sm:max-w-[120px] md:max-w-[200px]"
-              />
-            </a>
-          </div>
+            <img
+              src={PlayStoreImg}
+              alt='Get it on Google Play'
+              className='max-w-[150px] sm:max-w-[180px] md:max-w-[200px]'
+            />
+          </a>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

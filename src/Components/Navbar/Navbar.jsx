@@ -21,9 +21,9 @@ const Navbar = () => {
           {/* Logo section */}
           <div className='flex items-center gap-3'>
             <img src={Logo} alt='' className='h-12 md:h-16' />
-            <p className='text-2xl tracking-wide md:text-3xl'>
+            <p className='text-2xl font-extrabold tracking-wide font-cursive md:text-3xl'>
               VR{' '}
-              <span className='font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary'>
+              <span className='font-extrabold text-transparent font-parisienne bg-clip-text bg-gradient-to-r from-primary to-secondary'>
                 World
               </span>
             </p>
