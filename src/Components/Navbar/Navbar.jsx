@@ -22,9 +22,9 @@ const Navbar = () => {
           <div className='flex items-center gap-3'>
             <img src={Logo} alt='' className='h-12 md:h-16' />
             <p className='text-2xl font-extrabold tracking-wide font-cursive md:text-3xl'>
-              VR{' '}
+              Vision{' '}
               <span className='font-extrabold text-transparent font-parisienne bg-clip-text bg-gradient-to-r from-primary to-secondary'>
-                World
+                Pro
               </span>
             </p>
           </div>

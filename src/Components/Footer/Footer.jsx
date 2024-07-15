@@ -20,7 +20,7 @@ const Footer = () => {
           {/* Company Details */}
           <div className='space-y-4'>
             <h1 className='text-4xl font-bold font-cursive text-primary'>
-              Metaverse
+              Vision Pro
             </h1>
             <p className='text-sm text-gray-600 dark:text-gray-300'>
               Exploring the digital frontier, one pixel at a time. Join us on
