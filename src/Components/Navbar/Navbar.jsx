@@ -1,79 +1,68 @@
-import React from "react";
-import Logo from "../../assets/logo.png";
-import { HiMenuAlt1, HiMenuAlt3 } from "react-icons/hi";
-import DarkMode from "./DarkMode";
+import React from 'react';
+import Logo from '../../assets/logo.png';
+import { HiMenuAlt1, HiMenuAlt3 } from 'react-icons/hi';
+import DarkMode from './DarkMode';
 
 const NavLinks = [
-  {
-    id: 1,
-    name: "Home",
-    link: "#",
-  },
-  {
-    id: 2,
-    name: "Products",
-    link: "#",
-  },
-  {
-    id: 3,
-    name: "Pricing",
-    link: "#",
-  },
-  {
-    id: 4,
-    name: "Contact",
-    link: "#",
-  },
+  { id: 1, name: 'Home', link: '#' },
+  { id: 2, name: 'Products', link: '#' },
+  { id: 3, name: 'Pricing', link: '#' },
+  { id: 4, name: 'Contact', link: '#' },
 ];
+
 const Navbar = () => {
   const [showMenu, setShowMenu] = React.useState(false);
   const toggleMenu = () => setShowMenu(!showMenu);
+
   return (
-    <div className="relative z-[9999] text-black dark:text-white duration-300">
-      <div className="container py-2 md:py-0">
-        <div className="flex justify-between items-center">
-          {/* logo section */}
-          <div className="flex items-center gap-3">
-            <img src={Logo} alt="" className="h-16" />
-            <p className="text-3xl">
-              VR <span className="font-bold">World</span>
+    <div className='relative z-[9999] text-gray-800 dark:text-gray-200 duration-300 font-sans'>
+      <div className='container py-2 md:py-4'>
+        <div className='flex items-center justify-between'>
+          {/* Logo section */}
+          <div className='flex items-center gap-3'>
+            <img src={Logo} alt='' className='h-12 md:h-16' />
+            <p className='text-2xl tracking-wide md:text-3xl'>
+              VR{' '}
+              <span className='font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary'>
+                World
+              </span>
             </p>
           </div>
+
           {/* Desktop Menu section */}
-          <nav className="hidden md:block">
-            <ul className="flex items-center gap-8">
-              {NavLinks.map(({ id, name, link }) => {
-                return (
-                  <li key={id} className="py-4">
-                    <a
-                      href={link}
-                      className="text-xl font-semibold hover:text-primary py-2 hover:border-b-2 hover:border-secondary transition-colors duration-500"
-                    >
-                      {name}
-                    </a>
-                  </li>
-                );
-              })}
+          <nav className='hidden md:block'>
+            <ul className='flex items-center gap-8'>
+              {NavLinks.map(({ id, name, link }) => (
+                <li key={id} className='py-2'>
+                  <a
+                    href={link}
+                    className='relative text-lg font-medium transition-colors duration-300 hover:text-primary group'
+                  >
+                    {name}
+                    <span className='absolute left-0 bottom-0 w-full h-0.5 bg-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300'></span>
+                  </a>
+                </li>
+              ))}
               {/* Darkmode feature */}
               <DarkMode />
             </ul>
           </nav>
 
           {/* Mobile View Sidebar */}
-          <div className="md:hidden block">
-            <div className="flex items-center gap-4">
+          <div className='block md:hidden'>
+            <div className='flex items-center gap-4'>
               <DarkMode />
               {showMenu ? (
                 <HiMenuAlt1
                   onClick={toggleMenu}
-                  className="cursor-pointer "
-                  size={30}
+                  className='transition-colors duration-300 cursor-pointer text-primary hover:text-secondary'
+                  size={32}
                 />
               ) : (
                 <HiMenuAlt3
                   onClick={toggleMenu}
-                  className="cursor-pointer "
-                  size={30}
+                  className='transition-colors duration-300 cursor-pointer text-primary hover:text-secondary'
+                  size={32}
                 />
               )}
             </div>
