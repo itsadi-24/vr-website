@@ -1,6 +1,5 @@
 import {
-  FaFacebook,
-  FaInstagram,
+  FaGithub,
   FaLinkedin,
   FaLocationArrow,
   FaMobileAlt,
@@ -55,13 +54,10 @@ const Footer = () => {
 
               {/* social handle */}
               <div className='flex items-center gap-3 mt-6'>
-                <a href='#'>
-                  <FaFacebook className='text-3xl duration-300 hover:text-primary' />
+                <a href='https://github.com/itsadi-24'>
+                  <FaGithub className='text-3xl duration-300 hover:text-primary' />
                 </a>
-                <a href='#'>
-                  <FaInstagram className='text-3xl duration-300 hover:text-primary' />
-                </a>
-                <a href='#'>
+                <a href='https://www.linkedin.com/in/adi-prasan-khuntia-3944072a5/'>
                   <FaLinkedin className='text-3xl duration-300 hover:text-primary' />
                 </a>
               </div>
